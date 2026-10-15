@@ -1,0 +1,26 @@
+Offline verification date: 2026-10-14
+Python: 3.14.8
+Platform: Darwin arm64
+Command: python3 -m unittest discover -s tests -v
+
+test_auth_account_case_normalized (test_lab.LabTests.test_auth_account_case_normalized) ... ok
+test_auth_grouping_prevents_cross_entity_merge (test_lab.LabTests.test_auth_grouping_prevents_cross_entity_merge) ... ok
+test_auth_threshold (test_lab.LabTests.test_auth_threshold) ... ok
+test_auth_wrong_channel_not_counted (test_lab.LabTests.test_auth_wrong_channel_not_counted) ... ok
+test_benign_routine_does_not_alert (test_lab.LabTests.test_benign_routine_does_not_alert) ... ok
+test_bucket_boundary_documented_blind_spot (test_lab.LabTests.test_bucket_boundary_documented_blind_spot) ... ok
+test_cli_evidence_and_bad_input (test_lab.LabTests.test_cli_evidence_and_bad_input) ... ok
+test_detections_do_not_depend_on_order_or_labels (test_lab.LabTests.test_detections_do_not_depend_on_order_or_labels) ... ok
+test_exact_fixture_alerts (test_lab.LabTests.test_exact_fixture_alerts) ... ok
+test_local_logon_and_missing_ip_not_grouped (test_lab.LabTests.test_local_logon_and_missing_ip_not_grouped) ... ok
+test_marker_decode_matches_script_block (test_lab.LabTests.test_marker_decode_matches_script_block) ... ok
+test_powershell_positive_and_negative_variants (test_lab.LabTests.test_powershell_positive_and_negative_variants) ... ok
+test_saved_outputs_reproduce_byte_for_byte (test_lab.LabTests.test_saved_outputs_reproduce_byte_for_byte) ... ok
+test_schema_duplicate_missing_type_and_time_errors (test_lab.LabTests.test_schema_duplicate_missing_type_and_time_errors) ... ok
+test_spl_literal_patterns_on_fixture (test_lab.LabTests.test_spl_literal_patterns_on_fixture) ... ok
+test_task_executable_path_only (test_lab.LabTests.test_task_executable_path_only) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.233s
+
+OK

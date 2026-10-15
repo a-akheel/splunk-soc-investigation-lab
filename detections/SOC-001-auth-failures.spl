@@ -1,0 +1,10 @@
+index=soc_lab sourcetype=soclab:json
+| spath
+| where Channel="Security" AND EventCode=4625 AND (LogonType=3 OR LogonType=10)
+| where isnotnull(Computer) AND len(Computer)>0 AND Computer!="-" AND isnotnull(TargetDomainName) AND len(TargetDomainName)>0 AND TargetDomainName!="-" AND isnotnull(TargetUserName) AND len(TargetUserName)>0 AND TargetUserName!="-" AND isnotnull(IpAddress) AND len(IpAddress)>0 AND IpAddress!="-"
+| eval account=lower(TargetDomainName)."\\".lower(TargetUserName), src_ip=IpAddress
+| bin _time span=5m
+| stats count AS failures values(event_uid) AS event_uids BY _time Computer account src_ip
+| where failures>=5
+| eval rule="SOC-001"
+| sort 0 _time Computer account src_ip

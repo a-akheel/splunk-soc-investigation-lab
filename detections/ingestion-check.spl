@@ -1,0 +1,6 @@
+index=soc_lab sourcetype=soclab:json
+| spath
+| eval parsed_time=strptime(TimeCreated,"%Y-%m-%dT%H:%M:%SZ")
+| eval time_mismatch=if(isnull(parsed_time) OR abs(_time-parsed_time)>0,1,0)
+| stats count AS events dc(event_uid) AS unique_ids sum(time_mismatch) AS timestamp_mismatches BY Channel EventCode
+| sort 0 Channel EventCode

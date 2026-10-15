@@ -1,0 +1,64 @@
+[
+  {
+    "Computer": "ws-01",
+    "account": "lab\\analyst",
+    "bucket_epoch": 1790848800,
+    "count": 8,
+    "event_uids": [
+      "AUTH-001",
+      "AUTH-002",
+      "AUTH-003",
+      "AUTH-004",
+      "AUTH-005",
+      "AUTH-006",
+      "AUTH-007",
+      "AUTH-008"
+    ],
+    "rule": "SOC-001",
+    "src_ip": "198.51.100.23"
+  },
+  {
+    "Computer": "files-01",
+    "account": "lab\\svc_backup",
+    "bucket_epoch": 1790852400,
+    "count": 6,
+    "event_uids": [
+      "FP-A-001",
+      "FP-A-002",
+      "FP-A-003",
+      "FP-A-004",
+      "FP-A-005",
+      "FP-A-006"
+    ],
+    "rule": "SOC-001",
+    "src_ip": "192.0.2.50"
+  },
+  {
+    "Computer": "mgmt-01",
+    "event_uids": [
+      "FP-P-001"
+    ],
+    "rule": "SOC-002"
+  },
+  {
+    "Computer": "ws-01",
+    "event_uids": [
+      "PS-001"
+    ],
+    "rule": "SOC-002"
+  },
+  {
+    "Computer": "mgmt-01",
+    "event_uids": [
+      "FP-T-001"
+    ],
+    "rule": "SOC-003"
+  },
+  {
+    "Computer": "ws-01",
+    "event_uids": [
+      "TASK-001"
+    ],
+    "rule": "SOC-003"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "channel_counts": {
+    "Microsoft-Windows-PowerShell/Operational": 32,
+    "Microsoft-Windows-Sysmon/Operational": 32,
+    "Security": 50
+  },
+  "dataset": "soclab-v1",
+  "event_code_counts": {
+    "1": 32,
+    "4104": 32,
+    "4624": 31,
+    "4625": 16,
+    "4698": 3
+  },
+  "event_count": 114,
+  "first_time": "2026-10-01T09:00:00Z",
+  "last_time": "2026-10-01T11:10:00Z",
+  "sha256": "3f312bfc5a42304e34d60d434e5813e22789e9a038993e316e43836a9258643c",
+  "synthetic": true,
+  "validation": "Python reference logic only; SPL not executed in Splunk"
+}

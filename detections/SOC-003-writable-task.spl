@@ -1,0 +1,8 @@
+index=soc_lab sourcetype=soclab:json
+| spath
+| where Channel="Security" AND EventCode=4698
+| eval task_xml=lower(replace(TaskContent,"\\\\","/"))
+| where match(task_xml,"<command>[^<]*(/users/public/|/appdata/|/windows/temp/)[^<]*</command>")
+| eval rule="SOC-003"
+| table _time rule event_uid Computer SubjectDomainName SubjectUserName SubjectLogonId TaskName TaskContent
+| sort 0 _time event_uid

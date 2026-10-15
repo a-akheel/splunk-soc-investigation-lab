@@ -1,0 +1,7 @@
+index=soc_lab sourcetype=soclab:json
+| spath
+| where Channel="Microsoft-Windows-Sysmon/Operational" AND EventCode=1
+| where match(Image,"(?i)(?:^|[\\\\/])(?:powershell|pwsh)\\.exe$") AND match(CommandLine,"(?i)(?:^|\\s)-(?:enc|encodedcommand)\\s+[A-Za-z0-9+/]+={0,2}(?:\\s|$)")
+| eval rule="SOC-002"
+| table _time rule event_uid Computer User Image CommandLine ParentImage ProcessId ProcessGuid LogonId
+| sort 0 _time event_uid

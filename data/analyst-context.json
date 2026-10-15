@@ -1,0 +1,37 @@
+{
+  "notice": "Fictional exercise context, not facts inferred from telemetry. Never ingested or used to suppress detections.",
+  "focus_case": {
+    "events": [
+      "AUTH-001 through AUTH-009",
+      "PS-001",
+      "PS-002",
+      "TASK-001"
+    ],
+    "scenario": "Unapproved simulated activity on ws-01. Owner confirmation is intentionally absent; escalate for verification.",
+    "content": "Marker-only PowerShell; task target content and task execution are not supplied."
+  },
+  "benign_lookalikes": [
+    {
+      "ids": [
+        "FP-A-001 through FP-A-006"
+      ],
+      "context_id": "CTX-001",
+      "simulated_record": "CHG-LAB-101: backup credential rotated; scheduled job still held old credential. Owner attribution supplied by exercise; no remediation-success logs supplied."
+    },
+    {
+      "ids": [
+        "FP-P-001",
+        "FP-P-002"
+      ],
+      "context_id": "CTX-002",
+      "simulated_record": "CHG-LAB-102: approved inventory marker on mgmt-01, LAB\\svc_deploy, LabDeploy agent, 11:00-11:30 UTC. Script text is the expected marker."
+    },
+    {
+      "ids": [
+        "FP-T-001"
+      ],
+      "context_id": "CTX-003",
+      "simulated_record": "CHG-LAB-103: approved maintenance marker registered on mgmt-01 by LAB\\svc_maint, 11:00-11:30 UTC. Temporary executable path intentionally retained as a detection match; file contents and later cleanup are not supplied."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Optional alternative to the one-time Splunk Web upload. Do not use both.
+# Copy to the installed app's local/inputs.conf and replace the absolute path.
+[monitor:///ABSOLUTE/PATH/splunk-soc-lab/data/telemetry.jsonl]
+disabled = 0
+index = soc_lab
+sourcetype = soclab:json

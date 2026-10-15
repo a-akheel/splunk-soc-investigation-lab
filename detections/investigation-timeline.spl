@@ -1,0 +1,7 @@
+index=soc_lab sourcetype=soclab:json
+| spath
+| where Computer="ws-01"
+| eval account=coalesce(User,TargetDomainName."\\".TargetUserName,SubjectDomainName."\\".SubjectUserName)
+| eval detail=coalesce(CommandLine,ScriptBlockText,TaskName,IpAddress)
+| table _time event_uid Channel EventCode Computer account TargetLogonId LogonId SubjectLogonId ProcessId detail
+| sort 0 _time event_uid
